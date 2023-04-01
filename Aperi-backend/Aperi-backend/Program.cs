@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 
 //Create a configuration with a path to appsettings.json file which holds all of the settings:
 
-
 var configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json", false)
                     .Build();
 
