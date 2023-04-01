@@ -14,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     _ = options.UseSqlServer(configuration.GetConnectionString("database"));
-    _ = options.UseLazyLoadingProxies();
+    //_ = options.UseLazyLoadingProxies();
 });
 #endregion
 
@@ -38,6 +38,14 @@ if (app.Environment.IsDevelopment())
     _ = app.UseSwaggerUI();
 }
 
+app.UseCors(options =>
+        options.SetIsOriginAllowed(allow => _ = true)
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .AllowCredentials());
+
+app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
