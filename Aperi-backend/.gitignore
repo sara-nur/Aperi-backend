@@ -350,6 +350,6 @@ MigrationBackup/
 .ionide/
 
 # EF Core migrations
-Aperi-backend/Aperi-backend/Aperi-backend/Migrations/*
+Aperi-backend/Aperi-backend/Migrations/*
 
-Aperi-backend/.vs/Aperi-backend/v17/
+.vs/Aperi-backend/v17/
