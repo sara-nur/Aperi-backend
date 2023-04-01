@@ -21,6 +21,7 @@
     <Folder Include="Database\Entities\" />
     <Folder Include="DTOs\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Solution Items\" />
   </ItemGroup>
 
 </Project>

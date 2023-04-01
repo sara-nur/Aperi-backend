@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 //Create a configuration with a path to appsettings.json file which holds all of the settings:
 
-var configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json", false)
+IConfigurationRoot configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json", false)
                     .Build();
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Create a database context using SQL server with a connection string of "database"
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -29,7 +29,7 @@ builder.Services.AddSwaggerGen();
 
 #region App initialization
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
