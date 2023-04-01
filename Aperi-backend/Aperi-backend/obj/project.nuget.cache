@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "+qcZXdSiyXQCXexGNO+jzqgLzsBy5kW21UPsU7IBTda+eEK2I2Z6XfnCPWZ+r0WYCHa+3/l1E4jO2FzHHnEDRw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\haris\\Desktop\\Aperi-backend\\Aperi-backend\\Aperi-backend\\Aperi-backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\haris\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\haris\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\haris\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\haris\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\haris\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\haris\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
