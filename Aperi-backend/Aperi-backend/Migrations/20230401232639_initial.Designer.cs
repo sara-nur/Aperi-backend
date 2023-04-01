@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aperi_backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230401232418_initial")]
+    [Migration("20230401232639_initial")]
     partial class initial
     {
         /// <inheritdoc />
