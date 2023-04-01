@@ -9,7 +9,7 @@ add-migration <migration-name>
 ```
 command in the Package manager console in your IDE.
 
-After that, build the database with the
+2. After that, build the database with the
 ```
 update-database 
 ```
