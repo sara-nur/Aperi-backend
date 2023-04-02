@@ -13,6 +13,10 @@ namespace Aperi_backend.Database.Entities
         public string? LastName { get; set; }
         [Column("created_at")]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        [ForeignKey(nameof(UserCardOrTag)), Column("nfc_id")]
+        public string? NfcId { get; set; }
+
         [Column("user_card_or_tag")]
         public virtual NfcCode? UserCardOrTag { get; set; }
     }
