@@ -351,5 +351,3 @@ MigrationBackup/
 
 # EF Core migrations
 Aperi-backend/Aperi-backend/Migrations/*
-
-Aperi-backend/Aperi-backend/.vs/*
