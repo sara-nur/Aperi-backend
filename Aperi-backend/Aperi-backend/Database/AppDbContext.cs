@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Aperi_backend.Database.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aperi_backend.Database;
 
@@ -9,6 +10,11 @@ public class AppDbContext : DbContext
     {
 
     }
+    #endregion
+
+    #region Database sets
+    public virtual DbSet<User> Users { get; set; }
+    public virtual DbSet<NfcCode> NfcCodes { get; set; }
     #endregion
 
     #region Model creating
