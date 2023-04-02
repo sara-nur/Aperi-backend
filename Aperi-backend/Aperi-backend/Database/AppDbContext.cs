@@ -1,4 +1,5 @@
 ﻿using Aperi_backend.Database.Entities;
+using Aperi_backend.Database.Seeds;
 using Microsoft.EntityFrameworkCore;
 
 namespace Aperi_backend.Database;
@@ -21,6 +22,10 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
+        #region Seeds
+        _ = modelBuilder.ApplyConfiguration(new UserSeed());
+        #endregion
     }
     #endregion
 }
