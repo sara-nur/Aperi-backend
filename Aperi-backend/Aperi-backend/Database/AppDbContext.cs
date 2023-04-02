@@ -15,7 +15,7 @@ public class AppDbContext : DbContext
 
     #region Database sets
     public virtual DbSet<User> Users { get; set; }
-    public virtual DbSet<NfcCode> NfcCodes { get; set; }
+    public virtual DbSet<NfcCardOrTag> NfcCodes { get; set; }
     #endregion
 
     #region Model creating

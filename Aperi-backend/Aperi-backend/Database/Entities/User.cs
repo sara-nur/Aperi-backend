@@ -19,6 +19,6 @@ namespace Aperi_backend.Database.Entities
         public string? NfcId { get; set; }
 
         [Column("user_card_or_tag")]
-        public virtual NfcCode? UserCardOrTag { get; set; }
+        public virtual NfcCardOrTag? UserCardOrTag { get; set; }
     }
 }
