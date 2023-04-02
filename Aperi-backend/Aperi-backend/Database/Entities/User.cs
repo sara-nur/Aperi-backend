@@ -15,7 +15,7 @@ namespace Aperi_backend.Database.Entities
         [Column("created_at")]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        [ForeignKey(nameof(UserCardOrTag)), Column("nfc_id"),StringLength(14)]
+        [ForeignKey(nameof(UserCardOrTag)), Column("nfc_id"),StringLength(8)]
         public string? NfcId { get; set; }
 
         [Column("user_card_or_tag")]
