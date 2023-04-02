@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Aperi_backend.Database.Entities
 {
@@ -14,7 +15,7 @@ namespace Aperi_backend.Database.Entities
         [Column("created_at")]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        [ForeignKey(nameof(UserCardOrTag)), Column("nfc_id")]
+        [ForeignKey(nameof(UserCardOrTag)), Column("nfc_id"),StringLength(14)]
         public string? NfcId { get; set; }
 
         [Column("user_card_or_tag")]
