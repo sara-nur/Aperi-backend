@@ -9,7 +9,7 @@ add-migration <migration-name>
 ```
 command in the Package manager console in your IDE.
 
-After that, build the database with the
+2. After that, build the database with the
 ```
 update-database 
 ```
@@ -52,18 +52,13 @@ command also in your IDE's Package manager console.
 - file names in **snake_case**
 ---
 
-### Versioning conventions:
-
-- [**Semantic versioning**](https://semver.org/#semantic-versioning-200)
----
-
 ### Git conventions:
 - commit messages in **imperative**
 - commit messages starting with a **lowercase** letter
 - [commit message standars](https://gist.github.com/tonibardina/9290fbc7d605b4f86919426e614fe692)
 - linking **"AB#nn"** in a **new line** in a commit message
 - **no** commit message ends with a period, question or exclamation mark
-- workflow: [**gitflow**](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+- workflow: [*gitflow*](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 ---
 
 ### Database conventions:
