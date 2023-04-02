@@ -14,12 +14,14 @@ namespace Aperi_backend.Database.Seeds
                     Id = 1,
                     FirstName = "Sara",
                     LastName = "Nuredinovski",
+                    NfcId= "95381EE7" //Card
                 },
                 new User()
                 {
                     Id = 2,
                     FirstName = "Haris",
                     LastName = "Kordić",
+                    NfcId= "2DC951D3" //Tag
                 });
         }
     }
