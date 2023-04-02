@@ -7,7 +7,7 @@ namespace Aperi_backend.Database.Entities
     public class NfcCardOrTag
     {
         [Column("Code"),StringLength(14)]
-        public string Code { get; set; }
+        public string CodeId { get; set; }
         [Column("created_at")]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
