@@ -25,6 +25,7 @@ public class AppDbContext : DbContext
 
         #region Seeds
         _ = modelBuilder.ApplyConfiguration(new UserSeed());
+        _ = modelBuilder.ApplyConfiguration(new NfcSeed());
         #endregion
     }
     #endregion
