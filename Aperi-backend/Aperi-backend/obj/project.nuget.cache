@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ioC7zUEIcD4a9etQeMFZRzY5MYgYHw8/egb9apsS99pZYEmkFxPrtgKT9W+00J6l1urLbvg388t/4TODLeCa6A==",
+  "dgSpecHash": "xnBcJ9CUabjlSoCBBbiM7kSeKkzj6ltsofwPpAbmsFi5A4FVRWwcfheCsLcWsPk30Tw4eIqDIawVA/F5ZH0pvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\haris\\Desktop\\Aperi-backend\\Aperi-backend\\Aperi-backend\\Aperi-backend.csproj",
+  "projectFilePath": "C:\\Users\\haris\\Desktop\\IoT\\Aperi-backend\\Aperi-backend\\Aperi-backend\\Aperi-backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\haris\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\haris\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
