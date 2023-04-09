@@ -353,3 +353,5 @@ MigrationBackup/
 Aperi-backend/Aperi-backend/Migrations/*
 
 Aperi-backend/Aperi-backend/.vs/*
+
+ Aperi-backend/Aperi-backend/Aperi-backend.csproj
