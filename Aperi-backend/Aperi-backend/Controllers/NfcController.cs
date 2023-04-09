@@ -18,16 +18,16 @@ namespace Aperi_backend.Controllers
         [Route("api/scan/{nfcId}")]
         public ActionResult<dtoScanned> Scan(string nfcId)
         {
-            var scannedCard = _appDbContext.NfcCodes.Where(code => code.Id == nfcId).FirstOrDefault();
-            scannedCard!.IsScanned = true;
+            var scannedCard = _appDbContext.NfcCodes
+                .Where(code => code.Id == nfcId)
+                .FirstOrDefault();
 
-            return scannedCard!.IsScanned ?
-                (ActionResult<dtoScanned>)
-                Ok(new dtoScanned() { IsScanned = true }) :
-                (ActionResult<dtoScanned>)
-                BadRequest(new dtoScanned() { IsScanned = false });
-
+            if (scannedCard != null)
+            {
+                scannedCard.IsScanned = true;
+                return Ok(new dtoScanned() { IsScanned = true });
+            }
+            return BadRequest();
         }
-
     }
 }
