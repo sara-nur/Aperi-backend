@@ -14,5 +14,8 @@ namespace Aperi_backend.Database.Entities
 
         [Column("created_at")]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        [Column("is_code_valid")]
+        public bool isCodeValid { get; set; } = false;
     }
 }

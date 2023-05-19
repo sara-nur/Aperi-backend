@@ -19,10 +19,8 @@ namespace Aperi_backend.Controllers
 
         public ActionResult<string> SendCode([FromBody] string email)
         {
-
-
             #region user recognition 
-            var scannedCard = _db.NfcCodes.ToList().Where(code=>code.IsScanned=true).FirstOrDefault();
+            var scannedCard = _db.NfcCodes.ToList().Where(code=>code.IsScanned==true).FirstOrDefault();
             var user = _db.Users.ToList().Where(user => user.NfcId == scannedCard?.Id).FirstOrDefault();
             #endregion
 
@@ -52,5 +50,25 @@ namespace Aperi_backend.Controllers
 
             return Ok(new {oneTimeCode});
         }
+
+        [HttpPost]
+        [Route("api/code-authorization")]
+
+        public ActionResult CodeAuthorization( [FromBody] bool isCodeValid)
+        {
+            #region entity changes
+            var card = _db.NfcCodes.ToList ().Where (card => card.IsScanned == true).FirstOrDefault ();
+            card.isCodeValid = isCodeValid;
+            card.IsScanned = false;
+            _db.Update (card);
+            _db.SaveChanges ();
+            return Ok();
+            #endregion
+
+        }
+
     }
+
+
+
 }
