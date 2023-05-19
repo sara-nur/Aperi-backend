@@ -31,11 +31,11 @@ namespace Aperi_backend.Controllers
             #endregion
 
             #region preparing message and sending email
-            var bodyText = $"<h2>Hello Dear, {user}</h2>" +
+            var bodyText = $"<h3>Hello Dear {user},</h3>" +
                 $"<p>We are sending you your <strong>one time 4-digit</strong> authentification code: {oneTimeCode}</p>" +
                 "<p>Please go to the app and type in your code. </p>" +
-                "<br><p>Thank you for using Aperi</p>" +
-                "<br><p>Sincerely<br>Your Aperi Team</p>";
+                "<p>Thank you for using Aperi</p>" +
+                "<p>Sincerely<br>Your Aperi Team</p>";
 
             var message = new MailMessage()
             {

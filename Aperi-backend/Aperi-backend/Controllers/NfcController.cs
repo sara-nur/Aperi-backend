@@ -25,6 +25,8 @@ namespace Aperi_backend.Controllers
             if (scannedCard != null)
             {
                 scannedCard.IsScanned = true;
+                _appDbContext.NfcCodes.Update(scannedCard);
+                _appDbContext.SaveChanges();
                 return Ok(new dtoScanned() { IsScanned = true });
             }
             return BadRequest();
