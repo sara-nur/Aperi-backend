@@ -20,5 +20,10 @@ namespace Aperi_backend.Database.Entities
 
         [Column("user_card_or_tag")]
         public virtual NfcCardOrTag? UserCardOrTag { get; set; }
+
+        public override string ToString()
+        {
+            return FirstName + " " + LastName;
+        }
     }
 }

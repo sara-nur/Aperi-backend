@@ -1,6 +1,6 @@
 ﻿namespace Aperi_backend.Helpers
 {
-    public static class CodeGenerator
+    public static class CodeGeneratorHelper
     {
         public static string GetCode() {
             var rand = new Random();
