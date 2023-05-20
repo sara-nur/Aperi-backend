@@ -7,10 +7,10 @@ using System.Net.Mail;
 namespace Aperi_backend.Controllers
 {
     [ApiController]
-    public class CodeAuthController : ControllerBase
+    public class CodeController : ControllerBase
     {
         private readonly AppDbContext _db;
-        public CodeAuthController(AppDbContext db) {
+        public CodeController(AppDbContext db) {
             _db = db;
         }
 
