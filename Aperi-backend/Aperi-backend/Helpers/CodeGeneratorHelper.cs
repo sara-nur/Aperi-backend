@@ -4,7 +4,7 @@
     {
         public static string GetCode() {
             var rand = new Random();
-            return rand.Next(0000, 9999).ToString();
+            return rand.Next(1111, 9999).ToString();
         }
     }
 }

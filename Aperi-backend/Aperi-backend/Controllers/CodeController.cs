@@ -52,7 +52,7 @@ namespace Aperi_backend.Controllers
         }
 
         [HttpPost]
-        [Route("api/code-authorization")]
+        [Route("api/code-auth")]
 
         public ActionResult CodeAuthorization( [FromBody] bool isCodeValid)
         {
