@@ -17,5 +17,11 @@ namespace Aperi_backend.Database.Entities
 
         [Column("is_code_valid")]
         public bool isCodeValid { get; set; } = false;
+
+        [Column("is_face_id_valid")]
+        public bool isFaceIdValid { get; set; } = false;
+
+        [Column("is_fingerprint_valid")]
+        public bool isFingerprintValid { get; set; } = false;
     }
 }

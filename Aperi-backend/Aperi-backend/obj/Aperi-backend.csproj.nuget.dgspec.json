@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sara\\Documents\\github-sara-nur\\Aperi-backend\\Aperi-backend\\Aperi-backend\\Aperi-backend.csproj": {}
+    "C:\\Users\\Korisnik\\Desktop\\Aperi-backend\\Aperi-backend\\Aperi-backend\\Aperi-backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sara\\Documents\\github-sara-nur\\Aperi-backend\\Aperi-backend\\Aperi-backend\\Aperi-backend.csproj": {
+    "C:\\Users\\Korisnik\\Desktop\\Aperi-backend\\Aperi-backend\\Aperi-backend\\Aperi-backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sara\\Documents\\github-sara-nur\\Aperi-backend\\Aperi-backend\\Aperi-backend\\Aperi-backend.csproj",
+        "projectUniqueName": "C:\\Users\\Korisnik\\Desktop\\Aperi-backend\\Aperi-backend\\Aperi-backend\\Aperi-backend.csproj",
         "projectName": "Aperi-backend",
-        "projectPath": "C:\\Users\\Sara\\Documents\\github-sara-nur\\Aperi-backend\\Aperi-backend\\Aperi-backend\\Aperi-backend.csproj",
-        "packagesPath": "C:\\Users\\Sara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sara\\Documents\\github-sara-nur\\Aperi-backend\\Aperi-backend\\Aperi-backend\\obj\\",
+        "projectPath": "C:\\Users\\Korisnik\\Desktop\\Aperi-backend\\Aperi-backend\\Aperi-backend\\Aperi-backend.csproj",
+        "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Korisnik\\Desktop\\Aperi-backend\\Aperi-backend\\Aperi-backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
