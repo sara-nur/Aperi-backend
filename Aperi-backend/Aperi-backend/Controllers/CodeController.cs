@@ -1,4 +1,5 @@
 ﻿using Aperi_backend.Database;
+using Aperi_backend.DTOs;
 using Aperi_backend.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +18,7 @@ namespace Aperi_backend.Controllers
         [HttpPost]
         [Route("api/get-code")]
 
-        public ActionResult<string> SendCode([FromBody] string email)
+        public ActionResult<string> SendCode([FromBody] dtoEmail email)
         {
             #region user recognition 
             var scannedCard = _db.NfcCodes.ToList().Where(code=>code.IsScanned==true).FirstOrDefault();
@@ -42,7 +43,7 @@ namespace Aperi_backend.Controllers
                 Body = bodyText,
                 IsBodyHtml = true,
             };
-            message.To.Add(email);
+            message.To.Add(email.Email);
 
             EmailHelper.SendEmail(message);
                                                                         
