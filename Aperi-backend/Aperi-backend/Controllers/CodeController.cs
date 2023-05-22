@@ -55,11 +55,11 @@ namespace Aperi_backend.Controllers
         [HttpPost]
         [Route("api/code-auth")]
 
-        public ActionResult CodeAuthorization( [FromBody] bool isCodeValid)
+        public ActionResult CodeAuthorization( [FromBody] dtoAuth auth)
         {
             #region entity changes
             var card = _db.NfcCodes.ToList ().Where (card => card.IsScanned == true).FirstOrDefault ();
-            card.isCodeValid = isCodeValid;
+            card.isCodeValid = auth.isAuthorized;
             card.IsScanned = false;
             _db.Update (card);
             _db.SaveChanges ();

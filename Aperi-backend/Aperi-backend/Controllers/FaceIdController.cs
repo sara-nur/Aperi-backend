@@ -1,4 +1,5 @@
 ﻿using Aperi_backend.Database;
+using Aperi_backend.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Aperi_backend.Controllers
@@ -14,12 +15,12 @@ namespace Aperi_backend.Controllers
 
         [HttpPost]
         [Route("api/face-id-auth")]
-        public ActionResult FaceIdAuth([FromBody] bool auth)
+        public ActionResult FaceIdAuth([FromBody] dtoAuth auth)
         {
             var card = _appDbContext.NfcCodes.ToList()
                 .Where(card => card.IsScanned == true).FirstOrDefault();
 
-            card.isFaceIdValid= auth;
+            card.isFaceIdValid= auth.isAuthorized;
             card.IsScanned = false;
             _appDbContext.Update(card);
             _appDbContext.SaveChanges();

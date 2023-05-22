@@ -1,4 +1,5 @@
 ﻿using Aperi_backend.Database;
+using Aperi_backend.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Aperi_backend.Controllers
@@ -14,11 +15,11 @@ namespace Aperi_backend.Controllers
         }
         [HttpPost]
         [Route("api/fingerprint-auth")]
-        public ActionResult FingerprintAuth([FromBody] bool auth)
+        public ActionResult FingerprintAuth([FromBody] dtoAuth auth)
         {
             var card = _appDbContext.NfcCodes.ToList()
                 .Where(card => card.IsScanned == true).FirstOrDefault();
-            card.isFingerprintValid = auth;
+            card.isFingerprintValid = auth.isAuthorized;
             card.IsScanned = false;
             _appDbContext.Update(card);
             _appDbContext.SaveChanges();
