@@ -31,5 +31,28 @@ namespace Aperi_backend.Controllers
             }
             return BadRequest();
         }
+
+        [HttpGet]
+        [Route("api/is-two-way-auth")]
+        public ActionResult<bool> IsTwoWatAuth()
+        {
+            var cardOrTag = _appDbContext.NfcCodes
+                .Where(card => card.isFaceIdValid
+                 || card.isCodeValid
+                 || card.isFingerprintValid).FirstOrDefault();
+            if (cardOrTag != null)
+            {
+                cardOrTag.isCodeValid = false;
+                cardOrTag.isFingerprintValid = false;
+                cardOrTag.isFaceIdValid = false;
+                _appDbContext.Update(cardOrTag);
+                _appDbContext.SaveChanges();
+                return Ok(true);
+            }
+            else
+            {
+                return Ok(false);
+            }
+        }
     }
 }
