@@ -19,11 +19,15 @@ namespace Aperi_backend.Controllers
         {
             var card = _appDbContext.NfcCodes.ToList()
                 .Where(card => card.IsScanned == true).FirstOrDefault();
-            card.isFingerprintValid = auth.isAuthorized;
-            card.IsScanned = false;
-            _appDbContext.Update(card);
-            _appDbContext.SaveChanges();
-            return Ok();
+            if (card != null)
+            {
+                card.isFingerprintValid = auth.isAuthorized;
+                card.IsScanned = false;
+                _appDbContext.Update(card);
+                _appDbContext.SaveChanges();
+                return Ok();
+            }
+            return BadRequest();
         }
     }
 }
