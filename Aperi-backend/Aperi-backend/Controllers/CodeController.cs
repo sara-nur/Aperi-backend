@@ -60,7 +60,7 @@ namespace Aperi_backend.Controllers
             #region entity changes
             var card = _db.NfcCodes.ToList().Where(card => card.IsScanned == true).FirstOrDefault();
 
-            if (card == null)
+            if (card != null)
             {
                 card.isCodeValid = auth.isAuthorized;
                 card.IsScanned = false;
