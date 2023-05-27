@@ -14,7 +14,7 @@ namespace Aperi_backend.Controllers
             _appDbContext = appDbContext;
         }
         [HttpPost]
-        [Route("api/fingerprint-auth")]
+        [Route("api/biometrics-auth")]
         public ActionResult FingerprintAuth([FromBody] dtoAuth auth)
         {
             var card = _appDbContext.NfcCodes.ToList()
@@ -22,6 +22,7 @@ namespace Aperi_backend.Controllers
             if (card != null)
             {
                 card.isFingerprintValid = auth.isAuthorized;
+                card.isFaceIdValid = auth.isAuthorized;
                 card.IsScanned = false;
                 _appDbContext.Update(card);
                 _appDbContext.SaveChanges();
